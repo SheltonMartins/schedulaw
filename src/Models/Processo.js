@@ -37,6 +37,11 @@ class Processo {
       const partesData = this.data.split("-");
       return partesData[1]
     }
+
+    exibeAno(){
+      const partesData = this.data.split("-");
+      return partesData[0]
+    }
   
     setData(data) {
       this.data = data;

@@ -91,7 +91,7 @@ function Formulario({ aoProcessoCadastrado }) {
                     onChange={handleAssuntoChange}
                 />
 
-                <button type="submit">Enviar</button>
+                <button type="submit">Incluir</button>
             </form>
         </div>
     );
