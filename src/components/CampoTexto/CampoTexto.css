@@ -1,0 +1,70 @@
+.form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="time"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="date"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Opcional: Estilizar o campo quando estiver focado */
+  input[type="text"]:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    border-color: #007BFF; /* Mude a cor da borda quando estiver focado */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adicione uma sombra de foco */
+  }
+  input[type="date"]:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    border-color: #007BFF; /* Mude a cor da borda quando estiver focado */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adicione uma sombra de foco */
+  }
+  input[type="time"]:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    border-color: #007BFF; /* Mude a cor da borda quando estiver focado */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adicione uma sombra de foco */
+  }
+  
+  /* Opcional: Estilizar o campo quando estiver preenchido */
+  input[type="text"]:not(:placeholder-shown) {
+    border-color: #28a745; /* Mude a cor da borda quando o campo estiver preenchido */
+  }
+
+  input[type="time"]:not(:placeholder-shown) {
+    border-color: #28a745; /* Mude a cor da borda quando o campo estiver preenchido */
+  }
+
+  input[type="date"]:not(:placeholder-shown) {
+    border-color: #28a745; /* Mude a cor da borda quando o campo estiver preenchido */
+  }
+  
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    input[type="text"] {
+      width: 100%;
+    }
+  }

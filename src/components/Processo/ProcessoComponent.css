@@ -1,0 +1,48 @@
+.processo__container {
+    width: 100%;
+    max-width: 80%; /* Largura máxima da caixa */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px; /* Espaçamento interno */
+    
+    align-items: center;
+    text-align: center;
+    background-color: #fff; /* Cor de fundo da caixa */
+  }
+
+  .processo__items{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .processo__container h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px; /* Tamanho da fonte desejado */
+    color: #333; /* Cor do texto escura */
+    border-bottom: 2px solid #333; /* Linha sombreada embaixo do texto */
+    
+  }
+  
+  .processo__container h3 {
+    font-size: 16px; /* Tamanho da fonte dos cabeçalhos */
+    margin-top: 0; /* Espaçamento entre os cabeçalhos e as labels */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .processo__container label {
+    font-size: 14px; /* Tamanho da fonte das labels */
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    
+  }
+
+  .botao__Deletar{
+    cursor: pointer;
+  }
+
+ 

@@ -1,0 +1,73 @@
+import './App.css';
+import Formulario from './components/Formulario';
+import Processo from './Models/Processo';
+import Rodape from './components/Rodape';
+import ProcessoComponent from './components/Processo';
+import React, { useState } from 'react';
+
+
+const processo1 = new Processo('Shelton Martins', '12312313213', '29-08-2023', '10:30', 'outros')
+const processo2 = new Processo('Cebola Martins', '12312313213', '30-02-2023', '10:30', 'outros')
+const processo3 = new Processo('Juliana Martins', '12312313213', '30-08-2023', '10:30', 'outros')
+const processo4 = new Processo('Carret Martins', '12312313213', '02-02-2023', '10:30', 'outros')
+const processo5 = new Processo('Nylon Martins', '12312313213', '31-02-2023', '10:30', 'outros')
+
+
+
+function processosDeHoje() {
+
+  const dataAtual = new Date(); // Obter a data atual
+
+  const dataFormatada = { dia: dataAtual.getDate(), mes: dataAtual.getMonth()+1, ano: dataAtual.getFullYear() }
+
+  return dataFormatada;
+}
+
+
+function App() {
+
+  const [processos, setProcessos] = useState([processo1, processo2, processo3, processo4, processo5])
+
+  // setProcessos([...processos, processoInicial])
+
+  const aoProcessoAdicionado = (processo) => {
+
+    setProcessos([...processos, processo])
+
+  }
+
+  const aoDeletarProcesso = () => {
+
+    alert('voce conseguiu')
+
+  }
+
+  return (
+    <div className="App">
+      <div className='processos__Container'>
+        <h2>Compromissos hoje</h2>
+        {processos.map(proc => {
+          if ((proc.exibeDia() == processosDeHoje().dia) && (proc.exibeMes() == processosDeHoje().mes)) {
+            return <ProcessoComponent processo={proc} aoDeletar={() => aoDeletarProcesso()} />
+          }
+          console.log(proc.exibeMes(), processosDeHoje().mes)
+        }
+        )}
+
+        <div className="divisoria"></div>
+
+        <h2>Compromissos amanhã</h2>
+        {processos.map(proc => {
+          if (proc.exibeDia() == processosDeHoje().dia+1) {
+            return <ProcessoComponent processo={proc} aoDeletar={() => aoDeletarProcesso()} />
+          }
+        }
+        )}
+      </div>
+      <Formulario aoProcessoCadastrado={processo => aoProcessoAdicionado(processo)}></Formulario>
+      <Rodape></Rodape>
+    </div>
+  );
+}
+
+export default App;
