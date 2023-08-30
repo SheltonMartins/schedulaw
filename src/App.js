@@ -6,11 +6,11 @@ import ProcessoComponent from './components/Processo';
 import React, { useState } from 'react';
 
 
-const processo1 = new Processo('Shelton Martins', '12312313213', '2023-08-31', '10:30', 'outros')
-const processo2 = new Processo('Cebola Martins', '12312313213', '2023-02-30', '10:30', 'outros')
-const processo3 = new Processo('Juliana Martins', '12312313213', '2023-08-30', '10:30', 'outros')
-const processo4 = new Processo('Carret Martins', '12312313213', '2023-08-31', '10:30', 'outros')
-const processo5 = new Processo('Nylon Martins', '12312313213', '31-02-2023', '10:30', 'outros')
+const processo1 = new Processo('Shelton Martins', '14412313213', '2023-08-31', '10:30', 'outros')
+const processo2 = new Processo('Robervaldo Cebola', '66631552313213', '2023-02-30', '10:30', 'outros')
+const processo3 = new Processo('Juliana Martins', '12312356513213', '2023-08-30', '10:30', 'outros')
+const processo4 = new Processo('Cristiano Ronaldo', '12312345513213', '2023-08-31', '10:30', 'outros')
+const processo5 = new Processo('Nylon Loja', '12312313213', '31-02-2023', '10:30', 'outros')
 
 
 
