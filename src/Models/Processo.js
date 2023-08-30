@@ -31,7 +31,7 @@ class Processo {
 
     exibeDia(){
       const partesData = this.data.split("-");
-      return partesData[0]
+      return partesData[2]
     }
     exibeMes(){
       const partesData = this.data.split("-");

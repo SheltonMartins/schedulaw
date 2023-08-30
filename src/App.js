@@ -6,10 +6,10 @@ import ProcessoComponent from './components/Processo';
 import React, { useState } from 'react';
 
 
-const processo1 = new Processo('Shelton Martins', '12312313213', '29-08-2023', '10:30', 'outros')
-const processo2 = new Processo('Cebola Martins', '12312313213', '30-02-2023', '10:30', 'outros')
-const processo3 = new Processo('Juliana Martins', '12312313213', '30-08-2023', '10:30', 'outros')
-const processo4 = new Processo('Carret Martins', '12312313213', '02-02-2023', '10:30', 'outros')
+const processo1 = new Processo('Shelton Martins', '12312313213', '2023-08-31', '10:30', 'outros')
+const processo2 = new Processo('Cebola Martins', '12312313213', '2023-02-30', '10:30', 'outros')
+const processo3 = new Processo('Juliana Martins', '12312313213', '2023-08-30', '10:30', 'outros')
+const processo4 = new Processo('Carret Martins', '12312313213', '2023-08-31', '10:30', 'outros')
 const processo5 = new Processo('Nylon Martins', '12312313213', '31-02-2023', '10:30', 'outros')
 
 
@@ -34,6 +34,8 @@ function App() {
 
     setProcessos([...processos, processo])
 
+    console.log(processo)
+
   }
 
   const aoDeletarProcesso = () => {
@@ -50,7 +52,7 @@ function App() {
           if ((proc.exibeDia() == processosDeHoje().dia) && (proc.exibeMes() == processosDeHoje().mes)) {
             return <ProcessoComponent processo={proc} aoDeletar={() => aoDeletarProcesso()} />
           }
-          console.log(proc.exibeMes(), processosDeHoje().mes)
+         
         }
         )}
 
