@@ -35,19 +35,13 @@ function Formulario({ aoProcessoCadastrado }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
         const processo = new Processo(autor, numeroProcesso, data, hora, assunto)
-
-        // Aqui você pode realizar qualquer lógica de envio do formulário, como enviar os dados para um servidor ou executar ações com eles no cliente.
-
         aoProcessoCadastrado(processo)
-
         setAutor('')
         setNumeroProcesso('')
         setData('')
         setHora('')
         setAssunto('')
-
     };
 
     return (

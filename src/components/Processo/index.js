@@ -17,12 +17,12 @@ const ProcessoComponent = ({ processo, aoDeletar }) => {
                     <label>{processo.assunto}</label>
                 </div>
                 <div>
-                    <h3>Data Audiência </h3>
-                    <label>{processo.data}</label>
+                    <h3>Horário da Audiência</h3>
+                    <label>{processo.hora}</label>
                 </div>
                 <div>
-                    <h3>Hora</h3>
-                    <label>{processo.hora}</label>
+                    <h3>Data  </h3>
+                    <label>{processo.exibeDia()}/{processo.exibeMes()}/{processo.exibeAno()}</label>
                 </div>
             </div>
         </div>
