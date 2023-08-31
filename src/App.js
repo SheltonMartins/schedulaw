@@ -5,19 +5,20 @@ import Rodape from './components/Rodape';
 import ProcessoComponent from './components/Processo';
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
+import ResultadosBusca from './components/ResultadoBusca';
 
 
 function dataDeHoje() {
   const dataAtual = new Date(); // Obter a data atual
-  const dataFormatada = { dia: dataAtual.getDate(), mes: dataAtual.getMonth() + 1, ano: dataAtual.getFullYear() , amanha: dataAtual.getDate()+1}
+  const dataFormatada = { dia: dataAtual.getDate(), mes: dataAtual.getMonth() + 1, ano: dataAtual.getFullYear(), amanha: dataAtual.getDate() + 1 }
   return dataFormatada
 }
 
-const processo1 = new Processo('Fulano Da Silva', '123456789', '2023-'+dataDeHoje().mes +'-'+ dataDeHoje().dia , '10:30', 'outros')
-const processo2 = new Processo('Nile Ciclano', '321654987', '2023-'+dataDeHoje().mes+'-'+dataDeHoje().amanha, '10:30', 'outros')
-const processo3 = new Processo('Cleo de Sá', '121212121212', '2023-'+dataDeHoje().mes +'-'+ dataDeHoje().dia , '10:30', 'outros')
-const processo4 = new Processo('Robervaldo Cebola', '1111111111', '2023-'+dataDeHoje().mes+'-'+dataDeHoje().amanha, '10:30', 'outros')
-const processo5 = new Processo('Ronaldo Nazario', '99999999999', '2023-'+dataDeHoje().mes+'-'+dataDeHoje().amanha, '10:30', 'outros')
+const processo1 = new Processo('Fulano Da Silva', '123456789', '2023-' + dataDeHoje().mes + '-' + dataDeHoje().dia, '10:30', 'outros')
+const processo2 = new Processo('Nile Ciclano', '321654987', '2023-' + dataDeHoje().mes + '-' + dataDeHoje().amanha, '10:30', 'outros')
+const processo3 = new Processo('Cleo de Sá', '121212121212', '2023-' + dataDeHoje().mes + '-' + dataDeHoje().dia, '10:30', 'outros')
+const processo4 = new Processo('Robervaldo Cebola', '1111111111', '2023-' + dataDeHoje().mes + '-' + dataDeHoje().amanha, '10:30', 'outros')
+const processo5 = new Processo('Ronaldo Nazario', '99999999999', '2023-' + dataDeHoje().mes + '-' + dataDeHoje().amanha, '10:30', 'outros')
 
 
 
@@ -60,15 +61,35 @@ function App() {
   }
 
   function buscarProcesso(processosBuscados) {
-    console.log(processosBuscados)
+    processos.map((processosEncontrados) => {
+      if (processosEncontrados.autor == processosBuscados) {
+        setProcessosResultado([...processosResultado, processosEncontrados])
+      }
+      if (processosEncontrados.numeroProcesso == processosBuscados) {
+        setProcessosResultado([...processosResultado, processosEncontrados])
+      }
+    })
+    
   }
+
+  function aoFecharBusca(){
+    setProcessosResultado([])
+  }
+
+
 
   return (
     <div className="App">
-      <Navbar 
-        aoBuscaProcessos={processos => buscarProcesso(processos)} 
-        //parei aqui
-      />
+      <Navbar
+        aoBuscaProcessos={processos => buscarProcesso(processos)}/>
+
+      {processosResultado.map(procEncontrados => {
+        return <ResultadosBusca
+          resultados={procEncontrados}
+          aoFechar={aoFecharBusca}
+        />
+      })}
+      
       <div className='processos__Container'>
         <h2>Todos de hoje</h2>
         {processos.map(proc => {

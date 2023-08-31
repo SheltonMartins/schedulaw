@@ -9,7 +9,15 @@ const Navbar = ({ aoBuscaProcessos }) => {
 
     setBusca(evento.target.value)
 
-    aoBuscaProcessos(evento.target.value)
+    
+
+  }
+
+  function aoClicar(){
+
+    aoBuscaProcessos(busca)
+
+    setBusca('')
 
   }
 
@@ -21,7 +29,7 @@ const Navbar = ({ aoBuscaProcessos }) => {
         <datalist id="sugestoes">
           <option value="ok"></option>
         </datalist>
-        <button>Buscar</button>
+        <button onClick={aoClicar}>Buscar</button>
       </div>
     </nav>
   );

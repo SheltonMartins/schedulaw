@@ -1,0 +1,76 @@
+.resultados-busca {
+    background-color: #000000; /* Cor de fundo escura */
+    color: #000000; /* Cor do texto branco */
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    transition: max-width 0.3s ease-in-out; /* Animação de largura */
+    align-items: center;
+  }
+
+  .resultados-busca h4{
+    color: #fff;
+    position: absolute;
+    padding-left: 0 0 0 10px;
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+  }
+  
+  /* Estilo para mostrar a barra de navegação em telas maiores */
+  @media (min-width: 768px) {
+    .resultados-busca {
+      flex-direction: row;
+      max-width: 100%; /* Largura máxima removida */
+    }
+  }
+  
+  /* Estilo para o cabeçalho dos resultados */
+  .resultados-header {
+    background-color: #222; /* Cor de fundo escura para o cabeçalho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Estilo para o botão de fechar */
+  .fechar {
+    background-color: #fff; /* Cor de fundo branca para o botão */
+    color: #333; /* Cor do texto escura para o botão */
+    border: none;
+    padding: 15px 15px;
+    cursor: pointer;
+    right: 0;
+    position: absolute;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+  }
+  
+  .fechar:hover {
+    background-color: #ddd; /* Cor de fundo quando o mouse passa por cima */
+  }
+  
+  /* Estilo para a lista de resultados */
+  .resultados-lista {
+    display: flex;
+    flex-wrap: wrap; /* Quebra para a próxima linha quando não couber */
+    justify-content: space-between; /* Distribui uniformemente os itens */
+    padding: 10px;
+    width: 100%;
+  }
+  
+  /* Estilo para cada item de resultado */
+  .resultado-item {
+    background-color: #000000; /* Cor de fundo escura para os itens */
+    color: #000000; /* Cor do texto branco */
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Animação de cor de fundo */
+    margin-top: 4rem;
+  }
+  

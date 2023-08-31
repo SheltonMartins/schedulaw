@@ -15,6 +15,16 @@
   .processo__items{
     display: flex;
     justify-content: space-around;
+    background-color: #ffffff; /* Cor de fundo escura para os itens */
+    color: #000000; /* Cor do texto branco */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Animação de cor de fundo */
+    margin-top: 2px;
+  }
+
+  .processo__items:hover{
+    background-color: #aca4a4; 
   }
   
   .processo__container h2 {

@@ -1,12 +1,11 @@
 import './ProcessoComponent.css'
 
 
-const ProcessoComponent = ({ processo, aoDeletar }) => {
+const ProcessoComponent = ({ processo }) => {
     return (
         <div className="processo__container">
             
             <h2>Processo Nº {processo.numeroProcesso}</h2>
-            {/* <div className='botao__Deletar' onClick={aoDeletar}>DELETAR</div> */}
             <div className="processo__items">
                 <div>
                     <h3>Autor</h3>
